@@ -1,6 +1,6 @@
 # Getting Started with Cotrugli documents verification system
 
-This project contains and is divided in 2 parts : 
+This project contains and is divided in 3 parts : 
 
 1)- Smart contracts directory\
     Contains : \
