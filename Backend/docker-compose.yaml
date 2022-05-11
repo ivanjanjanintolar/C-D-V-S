@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  postgres:
+    container_name: postgres_db
+    image: postgres:12
+    ports:
+      - '5432:5432'
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=cotrugli_db
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_PORT=5432
