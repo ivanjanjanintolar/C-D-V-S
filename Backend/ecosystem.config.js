@@ -5,7 +5,7 @@ module.exports = {
       name: 'main',
       script: './dist/main.js',
       env: {
-        SERVER_PORT: '4000',
+        SERVER_PORT: '3010',
         PG_PORT : '5432',
         PG_HOST: 'localhost',
         PG_USERNAME: 'root',
