@@ -9,8 +9,34 @@
     {
       "inputs": [
         {
+          "internalType": "address",
+          "name": "_toApprove",
+          "type": "address"
+        }
+      ],
+      "name": "approveAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_toRemove",
+          "type": "address"
+        }
+      ],
+      "name": "removeApprovedAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
           "internalType": "string",
-          "name": "digitalFingerprint",
+          "name": "_digitalFingerprint",
           "type": "string"
         }
       ],
@@ -23,7 +49,7 @@
       "inputs": [
         {
           "internalType": "string",
-          "name": "digitalFingerprint",
+          "name": "_digitalFingerprint",
           "type": "string"
         }
       ],
@@ -51,22 +77,22 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.7.0+commit.9e61f92b\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"removeContract\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"digitalFingerprint\",\"type\":\"string\"}],\"name\":\"startSignatures\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"digitalFingerprint\",\"type\":\"string\"}],\"name\":\"verifyDiploma\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"_confirmed\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"_timestamp\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/COTRUGLIDiplomaVerification.sol\":\"COTRUGLIDiplomaVerification\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/COTRUGLIDiplomaVerification.sol\":{\"keccak256\":\"0x729d48263038492c0a55f9a549bda0bcd25780d99294199d1cbe1df9158bdfc9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://14d01de128ca15bfa96597e673bd41f4e675d94932e25cc118014b985230efcb\",\"dweb:/ipfs/QmVbcsLuGNNz5XkKkutzxkM8uDwxo3ztpLAaiXVhzANDjT\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550610502806100606000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c8063483a11051461004657806369b486cb14610101578063fe389e09146101d9575b600080fd5b6100ff6004803603602081101561005c57600080fd5b810190808035906020019064010000000081111561007957600080fd5b82018360208201111561008b57600080fd5b803590602001918460018302840111640100000000831117156100ad57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506101e3565b005b6101ba6004803603602081101561011757600080fd5b810190808035906020019064010000000081111561013457600080fd5b82018360208201111561014657600080fd5b8035906020019184600183028401116401000000008311171561016857600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506102db565b6040518083151581526020018281526020019250505060405180910390f35b6101e161045b565b005b600180826040518082805190602001908083835b6020831061021a57805182526020820191506020810190506020830392506101f7565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060010160006101000a81548160ff021916908315150217905550426001826040518082805190602001908083835b6020831061029e578051825260208201915060208101905060208303925061027b565b6001836020036101000a03801982511681845116808217855250505050505090500191505090815260200160405180910390206000018190555050565b600080600115156001846040518082805190602001908083835b6020831061031857805182526020820191506020810190506020830392506102f5565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060010160009054906101000a900460ff16151514156103df5760019150816001846040518082805190602001908083835b6020831061039f578051825260208201915060208101905060208303925061037c565b6001836020036101000a03801982511681845116808217855250505050505090500191505090815260200160405180910390206000015491509150610456565b60009150816001846040518082805190602001908083835b6020831061041a57805182526020820191506020810190506020830392506103f7565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060000154915091505b915091565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146104b357600080fd5b3373ffffffffffffffffffffffffffffffffffffffff16fffea264697066735822122002ed36fe5eff9ed1af82042d1b4420b3f24eba4580ea421b7fa58330c1dce3fa64736f6c63430007000033",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c8063483a11051461004657806369b486cb14610101578063fe389e09146101d9575b600080fd5b6100ff6004803603602081101561005c57600080fd5b810190808035906020019064010000000081111561007957600080fd5b82018360208201111561008b57600080fd5b803590602001918460018302840111640100000000831117156100ad57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506101e3565b005b6101ba6004803603602081101561011757600080fd5b810190808035906020019064010000000081111561013457600080fd5b82018360208201111561014657600080fd5b8035906020019184600183028401116401000000008311171561016857600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506102db565b6040518083151581526020018281526020019250505060405180910390f35b6101e161045b565b005b600180826040518082805190602001908083835b6020831061021a57805182526020820191506020810190506020830392506101f7565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060010160006101000a81548160ff021916908315150217905550426001826040518082805190602001908083835b6020831061029e578051825260208201915060208101905060208303925061027b565b6001836020036101000a03801982511681845116808217855250505050505090500191505090815260200160405180910390206000018190555050565b600080600115156001846040518082805190602001908083835b6020831061031857805182526020820191506020810190506020830392506102f5565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060010160009054906101000a900460ff16151514156103df5760019150816001846040518082805190602001908083835b6020831061039f578051825260208201915060208101905060208303925061037c565b6001836020036101000a03801982511681845116808217855250505050505090500191505090815260200160405180910390206000015491509150610456565b60009150816001846040518082805190602001908083835b6020831061041a57805182526020820191506020810190506020830392506103f7565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060000154915091505b915091565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146104b357600080fd5b3373ffffffffffffffffffffffffffffffffffffffff16fffea264697066735822122002ed36fe5eff9ed1af82042d1b4420b3f24eba4580ea421b7fa58330c1dce3fa64736f6c63430007000033",
+  "metadata": "{\"compiler\":{\"version\":\"0.7.0+commit.9e61f92b\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_toApprove\",\"type\":\"address\"}],\"name\":\"approveAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_toRemove\",\"type\":\"address\"}],\"name\":\"removeApprovedAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"removeContract\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_digitalFingerprint\",\"type\":\"string\"}],\"name\":\"startSignatures\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_digitalFingerprint\",\"type\":\"string\"}],\"name\":\"verifyDiploma\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"_confirmed\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"_timestamp\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/COTRUGLIDiplomaVerification.sol\":\"COTRUGLIDiplomaVerification\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/COTRUGLIDiplomaVerification.sol\":{\"keccak256\":\"0x8aac181b6d2434557daafa9f8291cf9cb22925dbdb8a51d73dc22f9da0eaabd2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://956c1ec1227fbfb1682d919b1a83dcce1927caac8074e4f574f25dd395d1d620\",\"dweb:/ipfs/QmebmKT1PoBhRJLbmmo9ncdtJpRMtVrHduAR8xPi1ushsS\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506100603361006560201b60201c565b61011b565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146100bd57600080fd5b6001600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160006101000a81548160ff02191690831515021790555050565b6107eb8061012a6000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c806320f1d85b1461005c578063483a1105146100a057806369b486cb1461015b578063fabf657a14610233578063fe389e0914610277575b600080fd5b61009e6004803603602081101561007257600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610281565b005b610159600480360360208110156100b657600080fd5b81019080803590602001906401000000008111156100d357600080fd5b8201836020820111156100e557600080fd5b8035906020019184600183028401116401000000008311171561010757600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610337565b005b6102146004803603602081101561017157600080fd5b810190808035906020019064010000000081111561018e57600080fd5b8201836020820111156101a057600080fd5b803590602001918460018302840111640100000000831117156101c257600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506104db565b6040518083151581526020018281526020019250505060405180910390f35b6102756004803603602081101561024957600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061065b565b005b61027f610711565b005b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146102d957600080fd5b6000600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160006101000a81548160ff02191690831515021790555050565b60011515600260003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160009054906101000a900460ff161515146103e3576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260338152602001806107836033913960400191505060405180910390fd5b600180826040518082805190602001908083835b6020831061041a57805182526020820191506020810190506020830392506103f7565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060010160006101000a81548160ff021916908315150217905550426001826040518082805190602001908083835b6020831061049e578051825260208201915060208101905060208303925061047b565b6001836020036101000a03801982511681845116808217855250505050505090500191505090815260200160405180910390206000018190555050565b600080600115156001846040518082805190602001908083835b6020831061051857805182526020820191506020810190506020830392506104f5565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060010160009054906101000a900460ff16151514156105df5760019150816001846040518082805190602001908083835b6020831061059f578051825260208201915060208101905060208303925061057c565b6001836020036101000a03801982511681845116808217855250505050505090500191505090815260200160405180910390206000015491509150610656565b60009150816001846040518082805190602001908083835b6020831061061a57805182526020820191506020810190506020830392506105f7565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060000154915091505b915091565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146106b357600080fd5b6001600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160006101000a81548160ff02191690831515021790555050565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161461076957600080fd5b3373ffffffffffffffffffffffffffffffffffffffff16fffe546869732061646472657373206973206e6f7420617070726f76656420746f2065766f6b6520746869732066756e6374696f6ea26469706673582212204bcc4dce57a8c40d0bd56b99a776cdd191f3b003114eebb0807870f2094e058364736f6c63430007000033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c806320f1d85b1461005c578063483a1105146100a057806369b486cb1461015b578063fabf657a14610233578063fe389e0914610277575b600080fd5b61009e6004803603602081101561007257600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610281565b005b610159600480360360208110156100b657600080fd5b81019080803590602001906401000000008111156100d357600080fd5b8201836020820111156100e557600080fd5b8035906020019184600183028401116401000000008311171561010757600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610337565b005b6102146004803603602081101561017157600080fd5b810190808035906020019064010000000081111561018e57600080fd5b8201836020820111156101a057600080fd5b803590602001918460018302840111640100000000831117156101c257600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506104db565b6040518083151581526020018281526020019250505060405180910390f35b6102756004803603602081101561024957600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061065b565b005b61027f610711565b005b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146102d957600080fd5b6000600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160006101000a81548160ff02191690831515021790555050565b60011515600260003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160009054906101000a900460ff161515146103e3576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260338152602001806107836033913960400191505060405180910390fd5b600180826040518082805190602001908083835b6020831061041a57805182526020820191506020810190506020830392506103f7565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060010160006101000a81548160ff021916908315150217905550426001826040518082805190602001908083835b6020831061049e578051825260208201915060208101905060208303925061047b565b6001836020036101000a03801982511681845116808217855250505050505090500191505090815260200160405180910390206000018190555050565b600080600115156001846040518082805190602001908083835b6020831061051857805182526020820191506020810190506020830392506104f5565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060010160009054906101000a900460ff16151514156105df5760019150816001846040518082805190602001908083835b6020831061059f578051825260208201915060208101905060208303925061057c565b6001836020036101000a03801982511681845116808217855250505050505090500191505090815260200160405180910390206000015491509150610656565b60009150816001846040518082805190602001908083835b6020831061061a57805182526020820191506020810190506020830392506105f7565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060000154915091505b915091565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146106b357600080fd5b6001600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060000160006101000a81548160ff02191690831515021790555050565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161461076957600080fd5b3373ffffffffffffffffffffffffffffffffffffffff16fffe546869732061646472657373206973206e6f7420617070726f76656420746f2065766f6b6520746869732066756e6374696f6ea26469706673582212204bcc4dce57a8c40d0bd56b99a776cdd191f3b003114eebb0807870f2094e058364736f6c63430007000033",
   "immutableReferences": {},
-  "sourceMap": "180:1081:0:-:0;;;256:50;;;;;;;;;;288:10;280:5;;:18;;;;;;;;;;;;;;;;;;180:1081;;;;;;",
-  "deployedSourceMap": "180:1081:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;527:210;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;747:414;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;1168:84;;;:::i;:::-;;527:210;649:4;604:15;620:18;604:35;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:42;;;:49;;;;;;;;;;;;;;;;;;714:15;664;680:18;664:35;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:47;;:65;;;;527:210;:::o;747:414::-;824:15;841;923:4;877:50;;:15;893:18;877:35;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:42;;;;;;;;;;;;:50;;;873:283;;;968:4;955:17;;;974:15;990:18;974:35;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:47;;;947:75;;;;;;873:283;1085:5;1072:18;;;1092:15;1108:18;1092:35;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:47;;;1064:76;;;;747:414;;;;:::o;1168:84::-;357:5;;;;;;;;;;343:19;;:10;:19;;;339:33;;364:8;;;339:33;1233:10:::1;1220:24;;",
-  "source": "/*\r\n**   Signed Digital Asset - A contract to store signatures of digital assets.\r\n**   COTRUGLI Business School\r\n*/\r\n\r\n// SPDX-License-Identifier: MIT\r\npragma solidity =0.7.0;\r\n\r\ncontract COTRUGLIDiplomaVerification {\r\n    \r\n    address owner;\r\n    \r\n    constructor() {\r\n       owner = msg.sender;\r\n    }\r\n    \r\n    modifier isOwner() { if (msg.sender != owner) revert(); _; }\r\n\r\n    struct Diploma {\r\n        uint lastUpdated;\r\n        bool exists;\r\n    }\r\n    \r\n    mapping (string  => Diploma) diplomasMapping;\r\n    \r\n    function startSignatures(string memory digitalFingerprint) public {\r\n        diplomasMapping[digitalFingerprint].exists = true;\r\n        diplomasMapping[digitalFingerprint].lastUpdated = block.timestamp;\r\n    }\r\n\t\r\n\t\r\n\t\tfunction verifyDiploma(string memory digitalFingerprint) public view returns(bool _confirmed, uint _timestamp) {\r\n            if (diplomasMapping[digitalFingerprint].exists == true){\r\n                return (_confirmed = true, diplomasMapping[digitalFingerprint].lastUpdated);\r\n            } else  {\r\n                return (_confirmed = false, diplomasMapping[digitalFingerprint].lastUpdated);\r\n            }\r\n\t\t}\r\n\t\r\n\t function removeContract() public isOwner {\r\n        selfdestruct(msg.sender);\r\n    }\r\n    \r\n}",
-  "sourcePath": "C:\\Users\\Ivan\\Projekti\\playground\\coreui-free-react-admin-template\\SmartContracts\\contracts\\COTRUGLIDiplomaVerification.sol",
+  "sourceMap": "180:1661:0:-:0;;;256:86;;;;;;;;;;288:10;280:5;;:18;;;;;;;;;;;;;;;;;;308:26;323:10;308:14;;;:26;;:::i;:::-;180:1661;;696:132;393:5;;;;;;;;;;379:19;;:10;:19;;;375:33;;400:8;;;375:33;816:4:::1;766:24;:36;791:10;766:36;;;;;;;;;;;;;;;:47;;;:54;;;;;;;;;;;;;;;;;;696:132:::0;:::o;180:1661::-;;;;;;;",
+  "deployedSourceMap": "180:1661:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;836:138;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;986:343;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;1341:400;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;696:132;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;1748:84;;;:::i;:::-;;836:138;393:5;;;;;;;;;;379:19;;:10;:19;;;375:33;;400:8;;;375:33;961:5:::1;912:24;:35;937:9;912:35;;;;;;;;;;;;;;;:46;;;:54;;;;;;;;;;;;;;;;;;836:138:::0;:::o;986:343::-;1123:4;1072:55;;:24;:36;1097:10;1072:36;;;;;;;;;;;;;;;:47;;;;;;;;;;;;:55;;;1064:119;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1240:4;1194:15;1210:19;1194:36;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:43;;;:50;;;;;;;;;;;;;;;;;;1306:15;1255;1271:19;1255:36;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:48;;:66;;;;986:343;:::o;1341:400::-;1419:15;1436;1515:4;1468:51;;:15;1484:19;1468:36;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:43;;;;;;;;;;;;:51;;;1464:270;;;1556:4;1543:17;;;1562:15;1578:19;1562:36;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:48;;;1535:76;;;;;;1464:270;1666:5;1653:18;;;1673:15;1689:19;1673:36;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:48;;;1645:77;;;;1341:400;;;;:::o;696:132::-;393:5;;;;;;;;;;379:19;;:10;:19;;;375:33;;400:8;;;375:33;816:4:::1;766:24;:36;791:10;766:36;;;;;;;;;;;;;;;:47;;;:54;;;;;;;;;;;;;;;;;;696:132:::0;:::o;1748:84::-;393:5;;;;;;;;;;379:19;;:10;:19;;;375:33;;400:8;;;375:33;1813:10:::1;1800:24;;",
+  "source": "/*\r\n**   Signed Digital Asset - A contract to store signatures of digital assets.\r\n**   COTRUGLI Business School\r\n*/\r\n\r\n// SPDX-License-Identifier: MIT\r\npragma solidity =0.7.0;\r\n\r\ncontract COTRUGLIDiplomaVerification {\r\n    \r\n    address owner;\r\n    \r\n    constructor() {\r\n       owner = msg.sender;\r\n       approveAddress(msg.sender);\r\n    }\r\n    \r\n    modifier isOwner() { if (msg.sender != owner) revert(); _; }\r\n\r\n    struct Diploma {\r\n        uint lastUpdated;\r\n        bool exists;\r\n    }\r\n\r\n    struct ApprovedAddresses{\r\n        bool isApproved;\r\n    }\r\n    \r\n    mapping (string  => Diploma) diplomasMapping;\r\n    mapping (address => ApprovedAddresses) approvedAddressesMapping;\r\n\r\n     function approveAddress(address _toApprove) public isOwner {\r\n        approvedAddressesMapping[_toApprove].isApproved = true;\r\n    }\r\n\r\n    function removeApprovedAddress(address _toRemove) public isOwner {\r\n        approvedAddressesMapping[_toRemove].isApproved = false;\r\n    }\r\n    \r\n    function startSignatures(string memory _digitalFingerprint) public {\r\n        require(approvedAddressesMapping[msg.sender].isApproved == true, 'This address is not approved to evoke this function');\r\n        diplomasMapping[_digitalFingerprint].exists = true;\r\n        diplomasMapping[_digitalFingerprint].lastUpdated = block.timestamp;\r\n    }\r\n\t\r\n\t\r\n    function verifyDiploma(string memory _digitalFingerprint) public view returns(bool _confirmed, uint _timestamp) {\r\n        if (diplomasMapping[_digitalFingerprint].exists == true){\r\n            return (_confirmed = true, diplomasMapping[_digitalFingerprint].lastUpdated);\r\n        } else  {\r\n            return (_confirmed = false, diplomasMapping[_digitalFingerprint].lastUpdated);\r\n        }\r\n    }\r\n\t\r\n\t function removeContract() public isOwner {\r\n        selfdestruct(msg.sender);\r\n    }\r\n    \r\n}",
+  "sourcePath": "C:\\Users\\Ivan\\Projekti\\playground\\C-D-V-S\\SmartContracts\\contracts\\COTRUGLIDiplomaVerification.sol",
   "ast": {
     "absolutePath": "project:/contracts/COTRUGLIDiplomaVerification.sol",
     "exportedSymbols": {
       "COTRUGLIDiplomaVerification": [
-        103
+        156
       ]
     },
-    "id": 104,
+    "id": 157,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
@@ -88,9 +114,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 103,
+        "id": 156,
         "linearizedBaseContracts": [
-          103
+          156
         ],
         "name": "COTRUGLIDiplomaVerification",
         "nodeType": "ContractDefinition",
@@ -102,7 +128,7 @@
             "name": "owner",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 103,
+            "scope": 156,
             "src": "230:13:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -126,9 +152,9 @@
           },
           {
             "body": {
-              "id": 11,
+              "id": 16,
               "nodeType": "Block",
-              "src": "270:36:0",
+              "src": "270:72:0",
               "statements": [
                 {
                   "expression": {
@@ -191,11 +217,82 @@
                   "id": 10,
                   "nodeType": "ExpressionStatement",
                   "src": "280:18:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 12,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -15,
+                          "src": "323:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 13,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "323:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      ],
+                      "id": 11,
+                      "name": "approveAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 60,
+                      "src": "308:14:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 14,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "308:26:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 15,
+                  "nodeType": "ExpressionStatement",
+                  "src": "308:26:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 12,
+            "id": 17,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
@@ -214,17 +311,17 @@
               "parameters": [],
               "src": "270:0:0"
             },
-            "scope": 103,
-            "src": "256:50:0",
+            "scope": 156,
+            "src": "256:86:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 23,
+              "id": 28,
               "nodeType": "Block",
-              "src": "337:41:0",
+              "src": "373:41:0",
               "statements": [
                 {
                   "condition": {
@@ -233,7 +330,7 @@
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     },
-                    "id": 17,
+                    "id": 22,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -242,18 +339,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 14,
+                        "id": 19,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": -15,
-                        "src": "343:3:0",
+                        "src": "379:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 15,
+                      "id": 20,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -261,7 +358,7 @@
                       "memberName": "sender",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "343:10:0",
+                      "src": "379:10:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address_payable",
                         "typeString": "address payable"
@@ -271,34 +368,34 @@
                     "operator": "!=",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 16,
+                      "id": 21,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 3,
-                      "src": "357:5:0",
+                      "src": "393:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "343:19:0",
+                    "src": "379:19:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
                   "falseBody": null,
-                  "id": 21,
+                  "id": 26,
                   "nodeType": "IfStatement",
-                  "src": "339:33:0",
+                  "src": "375:33:0",
                   "trueBody": {
                     "expression": {
                       "argumentTypes": null,
                       "arguments": [],
                       "expression": {
                         "argumentTypes": [],
-                        "id": 18,
+                        "id": 23,
                         "name": "revert",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [
@@ -306,13 +403,13 @@
                           -19
                         ],
                         "referencedDeclaration": -19,
-                        "src": "364:6:0",
+                        "src": "400:6:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_revert_pure$__$returns$__$",
                           "typeString": "function () pure"
                         }
                       },
-                      "id": 19,
+                      "id": 24,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -320,53 +417,53 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "364:8:0",
+                      "src": "400:8:0",
                       "tryCall": false,
                       "typeDescriptions": {
                         "typeIdentifier": "t_tuple$__$",
                         "typeString": "tuple()"
                       }
                     },
-                    "id": 20,
+                    "id": 25,
                     "nodeType": "ExpressionStatement",
-                    "src": "364:8:0"
+                    "src": "400:8:0"
                   }
                 },
                 {
-                  "id": 22,
+                  "id": 27,
                   "nodeType": "PlaceholderStatement",
-                  "src": "374:1:0"
+                  "src": "410:1:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 24,
+            "id": 29,
             "name": "isOwner",
             "nodeType": "ModifierDefinition",
             "overrides": null,
             "parameters": {
-              "id": 13,
+              "id": 18,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "334:2:0"
+              "src": "370:2:0"
             },
-            "src": "318:60:0",
+            "src": "354:60:0",
             "virtual": false,
             "visibility": "internal"
           },
           {
             "canonicalName": "COTRUGLIDiplomaVerification.Diploma",
-            "id": 29,
+            "id": 34,
             "members": [
               {
                 "constant": false,
-                "id": 26,
+                "id": 31,
                 "mutability": "mutable",
                 "name": "lastUpdated",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 29,
-                "src": "412:16:0",
+                "scope": 34,
+                "src": "448:16:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -374,10 +471,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 25,
+                  "id": 30,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "412:4:0",
+                  "src": "448:4:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -388,13 +485,13 @@
               },
               {
                 "constant": false,
-                "id": 28,
+                "id": 33,
                 "mutability": "mutable",
                 "name": "exists",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 29,
-                "src": "439:11:0",
+                "scope": 34,
+                "src": "475:11:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -402,10 +499,10 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 27,
+                  "id": 32,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
-                  "src": "439:4:0",
+                  "src": "475:4:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bool",
                     "typeString": "bool"
@@ -417,52 +514,91 @@
             ],
             "name": "Diploma",
             "nodeType": "StructDefinition",
-            "scope": 103,
-            "src": "386:72:0",
+            "scope": 156,
+            "src": "422:72:0",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "COTRUGLIDiplomaVerification.ApprovedAddresses",
+            "id": 37,
+            "members": [
+              {
+                "constant": false,
+                "id": 36,
+                "mutability": "mutable",
+                "name": "isApproved",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 37,
+                "src": "537:15:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 35,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "537:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "ApprovedAddresses",
+            "nodeType": "StructDefinition",
+            "scope": 156,
+            "src": "502:58:0",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 33,
+            "id": 41,
             "mutability": "mutable",
             "name": "diplomasMapping",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 103,
-            "src": "470:44:0",
+            "scope": 156,
+            "src": "572:44:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_Diploma_$29_storage_$",
+              "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_Diploma_$34_storage_$",
               "typeString": "mapping(string => struct COTRUGLIDiplomaVerification.Diploma)"
             },
             "typeName": {
-              "id": 32,
+              "id": 40,
               "keyType": {
-                "id": 30,
+                "id": 38,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
-                "src": "479:6:0",
+                "src": "581:6:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_string_storage_ptr",
                   "typeString": "string"
                 }
               },
               "nodeType": "Mapping",
-              "src": "470:28:0",
+              "src": "572:28:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_Diploma_$29_storage_$",
+                "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_Diploma_$34_storage_$",
                 "typeString": "mapping(string => struct COTRUGLIDiplomaVerification.Diploma)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 31,
+                "id": 39,
                 "name": "Diploma",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 29,
-                "src": "490:7:0",
+                "referencedDeclaration": 34,
+                "src": "592:7:0",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Diploma_$29_storage_ptr",
+                  "typeIdentifier": "t_struct$_Diploma_$34_storage_ptr",
                   "typeString": "struct COTRUGLIDiplomaVerification.Diploma"
                 }
               }
@@ -471,15 +607,64 @@
             "visibility": "internal"
           },
           {
+            "constant": false,
+            "id": 45,
+            "mutability": "mutable",
+            "name": "approvedAddressesMapping",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 156,
+            "src": "623:63:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_ApprovedAddresses_$37_storage_$",
+              "typeString": "mapping(address => struct COTRUGLIDiplomaVerification.ApprovedAddresses)"
+            },
+            "typeName": {
+              "id": 44,
+              "keyType": {
+                "id": 42,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "632:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "623:38:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_ApprovedAddresses_$37_storage_$",
+                "typeString": "mapping(address => struct COTRUGLIDiplomaVerification.ApprovedAddresses)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 43,
+                "name": "ApprovedAddresses",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 37,
+                "src": "643:17:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_ApprovedAddresses_$37_storage_ptr",
+                  "typeString": "struct COTRUGLIDiplomaVerification.ApprovedAddresses"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
             "body": {
-              "id": 53,
+              "id": 59,
               "nodeType": "Block",
-              "src": "593:144:0",
+              "src": "755:73:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 43,
+                    "id": 57,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -490,29 +675,29 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 38,
-                          "name": "diplomasMapping",
+                          "id": 52,
+                          "name": "approvedAddressesMapping",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 33,
-                          "src": "604:15:0",
+                          "referencedDeclaration": 45,
+                          "src": "766:24:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_Diploma_$29_storage_$",
-                            "typeString": "mapping(string memory => struct COTRUGLIDiplomaVerification.Diploma storage ref)"
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_ApprovedAddresses_$37_storage_$",
+                            "typeString": "mapping(address => struct COTRUGLIDiplomaVerification.ApprovedAddresses storage ref)"
                           }
                         },
-                        "id": 40,
+                        "id": 54,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 39,
-                          "name": "digitalFingerprint",
+                          "id": 53,
+                          "name": "_toApprove",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 35,
-                          "src": "620:18:0",
+                          "referencedDeclaration": 47,
+                          "src": "791:10:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_string_memory_ptr",
-                            "typeString": "string memory"
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
                           }
                         },
                         "isConstant": false,
@@ -520,21 +705,21 @@
                         "isPure": false,
                         "lValueRequested": false,
                         "nodeType": "IndexAccess",
-                        "src": "604:35:0",
+                        "src": "766:36:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Diploma_$29_storage",
-                          "typeString": "struct COTRUGLIDiplomaVerification.Diploma storage ref"
+                          "typeIdentifier": "t_struct$_ApprovedAddresses_$37_storage",
+                          "typeString": "struct COTRUGLIDiplomaVerification.ApprovedAddresses storage ref"
                         }
                       },
-                      "id": 41,
+                      "id": 55,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
-                      "memberName": "exists",
+                      "memberName": "isApproved",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 28,
-                      "src": "604:42:0",
+                      "referencedDeclaration": 36,
+                      "src": "766:47:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -545,14 +730,14 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 42,
+                      "id": 56,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "bool",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "649:4:0",
+                      "src": "816:4:0",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -560,20 +745,105 @@
                       },
                       "value": "true"
                     },
-                    "src": "604:49:0",
+                    "src": "766:54:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 44,
+                  "id": 58,
                   "nodeType": "ExpressionStatement",
-                  "src": "604:49:0"
+                  "src": "766:54:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "fabf657a",
+            "id": 60,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 50,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 49,
+                  "name": "isOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 29,
+                  "src": "747:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
                 },
+                "nodeType": "ModifierInvocation",
+                "src": "747:7:0"
+              }
+            ],
+            "name": "approveAddress",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 48,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 47,
+                  "mutability": "mutable",
+                  "name": "_toApprove",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 60,
+                  "src": "720:18:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 46,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "720:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "719:20:0"
+            },
+            "returnParameters": {
+              "id": 51,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "755:0:0"
+            },
+            "scope": 156,
+            "src": "696:132:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 74,
+              "nodeType": "Block",
+              "src": "901:73:0",
+              "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 51,
+                    "id": 72,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -584,26 +854,381 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 45,
+                          "id": 67,
+                          "name": "approvedAddressesMapping",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 45,
+                          "src": "912:24:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_ApprovedAddresses_$37_storage_$",
+                            "typeString": "mapping(address => struct COTRUGLIDiplomaVerification.ApprovedAddresses storage ref)"
+                          }
+                        },
+                        "id": 69,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 68,
+                          "name": "_toRemove",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 62,
+                          "src": "937:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "912:35:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ApprovedAddresses_$37_storage",
+                          "typeString": "struct COTRUGLIDiplomaVerification.ApprovedAddresses storage ref"
+                        }
+                      },
+                      "id": 70,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "isApproved",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 36,
+                      "src": "912:46:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "66616c7365",
+                      "id": 71,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "961:5:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "false"
+                    },
+                    "src": "912:54:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 73,
+                  "nodeType": "ExpressionStatement",
+                  "src": "912:54:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "20f1d85b",
+            "id": 75,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 65,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 64,
+                  "name": "isOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 29,
+                  "src": "893:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "893:7:0"
+              }
+            ],
+            "name": "removeApprovedAddress",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 63,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 62,
+                  "mutability": "mutable",
+                  "name": "_toRemove",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 75,
+                  "src": "867:17:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 61,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "867:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "866:19:0"
+            },
+            "returnParameters": {
+              "id": 66,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "901:0:0"
+            },
+            "scope": 156,
+            "src": "836:138:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 106,
+              "nodeType": "Block",
+              "src": "1053:276:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 87,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "baseExpression": {
+                              "argumentTypes": null,
+                              "id": 81,
+                              "name": "approvedAddressesMapping",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 45,
+                              "src": "1072:24:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_ApprovedAddresses_$37_storage_$",
+                                "typeString": "mapping(address => struct COTRUGLIDiplomaVerification.ApprovedAddresses storage ref)"
+                              }
+                            },
+                            "id": 84,
+                            "indexExpression": {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 82,
+                                "name": "msg",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": -15,
+                                "src": "1097:3:0",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_magic_message",
+                                  "typeString": "msg"
+                                }
+                              },
+                              "id": 83,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "sender",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": null,
+                              "src": "1097:10:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address_payable",
+                                "typeString": "address payable"
+                              }
+                            },
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "nodeType": "IndexAccess",
+                            "src": "1072:36:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_ApprovedAddresses_$37_storage",
+                              "typeString": "struct COTRUGLIDiplomaVerification.ApprovedAddresses storage ref"
+                            }
+                          },
+                          "id": 85,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "isApproved",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 36,
+                          "src": "1072:47:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "74727565",
+                          "id": 86,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1123:4:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "true"
+                        },
+                        "src": "1072:55:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "546869732061646472657373206973206e6f7420617070726f76656420746f2065766f6b6520746869732066756e6374696f6e",
+                        "id": 88,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1129:53:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_5975663d370f1aebb2b88d314e3cf55c5ddc9497756ac0b07fc376619bbc6bda",
+                          "typeString": "literal_string \"This address is not approved to evoke this function\""
+                        },
+                        "value": "This address is not approved to evoke this function"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_5975663d370f1aebb2b88d314e3cf55c5ddc9497756ac0b07fc376619bbc6bda",
+                          "typeString": "literal_string \"This address is not approved to evoke this function\""
+                        }
+                      ],
+                      "id": 80,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "1064:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 89,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1064:119:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 90,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1064:119:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 96,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 91,
                           "name": "diplomasMapping",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 33,
-                          "src": "664:15:0",
+                          "referencedDeclaration": 41,
+                          "src": "1194:15:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_Diploma_$29_storage_$",
+                            "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_Diploma_$34_storage_$",
                             "typeString": "mapping(string memory => struct COTRUGLIDiplomaVerification.Diploma storage ref)"
                           }
                         },
-                        "id": 47,
+                        "id": 93,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 46,
-                          "name": "digitalFingerprint",
+                          "id": 92,
+                          "name": "_digitalFingerprint",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 35,
-                          "src": "680:18:0",
+                          "referencedDeclaration": 77,
+                          "src": "1210:19:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
                             "typeString": "string memory"
@@ -614,21 +1239,115 @@
                         "isPure": false,
                         "lValueRequested": false,
                         "nodeType": "IndexAccess",
-                        "src": "664:35:0",
+                        "src": "1194:36:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Diploma_$29_storage",
+                          "typeIdentifier": "t_struct$_Diploma_$34_storage",
                           "typeString": "struct COTRUGLIDiplomaVerification.Diploma storage ref"
                         }
                       },
-                      "id": 48,
+                      "id": 94,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "exists",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 33,
+                      "src": "1194:43:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 95,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1240:4:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "1194:50:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 97,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1194:50:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 104,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 98,
+                          "name": "diplomasMapping",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 41,
+                          "src": "1255:15:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_Diploma_$34_storage_$",
+                            "typeString": "mapping(string memory => struct COTRUGLIDiplomaVerification.Diploma storage ref)"
+                          }
+                        },
+                        "id": 100,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 99,
+                          "name": "_digitalFingerprint",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 77,
+                          "src": "1271:19:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1255:36:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Diploma_$34_storage",
+                          "typeString": "struct COTRUGLIDiplomaVerification.Diploma storage ref"
+                        }
+                      },
+                      "id": 101,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "lastUpdated",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 26,
-                      "src": "664:47:0",
+                      "referencedDeclaration": 31,
+                      "src": "1255:48:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -640,18 +1359,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 49,
+                        "id": 102,
                         "name": "block",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": -4,
-                        "src": "714:5:0",
+                        "src": "1306:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_block",
                           "typeString": "block"
                         }
                       },
-                      "id": 50,
+                      "id": 103,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -659,27 +1378,27 @@
                       "memberName": "timestamp",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "714:15:0",
+                      "src": "1306:15:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "664:65:0",
+                    "src": "1255:66:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 52,
+                  "id": 105,
                   "nodeType": "ExpressionStatement",
-                  "src": "664:65:0"
+                  "src": "1255:66:0"
                 }
               ]
             },
             "documentation": null,
             "functionSelector": "483a1105",
-            "id": 54,
+            "id": 107,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -687,18 +1406,18 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 36,
+              "id": 78,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 35,
+                  "id": 77,
                   "mutability": "mutable",
-                  "name": "digitalFingerprint",
+                  "name": "_digitalFingerprint",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 54,
-                  "src": "552:32:0",
+                  "scope": 107,
+                  "src": "1011:33:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -706,10 +1425,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 34,
+                    "id": 76,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "552:6:0",
+                    "src": "1011:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -719,25 +1438,25 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "551:34:0"
+              "src": "1010:35:0"
             },
             "returnParameters": {
-              "id": 37,
+              "id": 79,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "593:0:0"
+              "src": "1053:0:0"
             },
-            "scope": 103,
-            "src": "527:210:0",
+            "scope": 156,
+            "src": "986:343:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 90,
+              "id": 143,
               "nodeType": "Block",
-              "src": "858:303:0",
+              "src": "1453:288:0",
               "statements": [
                 {
                   "condition": {
@@ -746,7 +1465,7 @@
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     },
-                    "id": 68,
+                    "id": 121,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -757,26 +1476,26 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 63,
+                          "id": 116,
                           "name": "diplomasMapping",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 33,
-                          "src": "877:15:0",
+                          "referencedDeclaration": 41,
+                          "src": "1468:15:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_Diploma_$29_storage_$",
+                            "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_Diploma_$34_storage_$",
                             "typeString": "mapping(string memory => struct COTRUGLIDiplomaVerification.Diploma storage ref)"
                           }
                         },
-                        "id": 65,
+                        "id": 118,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 64,
-                          "name": "digitalFingerprint",
+                          "id": 117,
+                          "name": "_digitalFingerprint",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 56,
-                          "src": "893:18:0",
+                          "referencedDeclaration": 109,
+                          "src": "1484:19:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
                             "typeString": "string memory"
@@ -787,21 +1506,21 @@
                         "isPure": false,
                         "lValueRequested": false,
                         "nodeType": "IndexAccess",
-                        "src": "877:35:0",
+                        "src": "1468:36:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Diploma_$29_storage",
+                          "typeIdentifier": "t_struct$_Diploma_$34_storage",
                           "typeString": "struct COTRUGLIDiplomaVerification.Diploma storage ref"
                         }
                       },
-                      "id": 66,
+                      "id": 119,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "exists",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 28,
-                      "src": "877:42:0",
+                      "referencedDeclaration": 33,
+                      "src": "1468:43:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -812,14 +1531,14 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 67,
+                      "id": 120,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "bool",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "923:4:0",
+                      "src": "1515:4:0",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -827,16 +1546,16 @@
                       },
                       "value": "true"
                     },
-                    "src": "877:50:0",
+                    "src": "1468:51:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
                   "falseBody": {
-                    "id": 88,
+                    "id": 141,
                     "nodeType": "Block",
-                    "src": "1045:111:0",
+                    "src": "1630:104:0",
                     "statements": [
                       {
                         "expression": {
@@ -844,19 +1563,19 @@
                           "components": [
                             {
                               "argumentTypes": null,
-                              "id": 81,
+                              "id": 134,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
                               "lValueRequested": false,
                               "leftHandSide": {
                                 "argumentTypes": null,
-                                "id": 79,
+                                "id": 132,
                                 "name": "_confirmed",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 59,
-                                "src": "1072:10:0",
+                                "referencedDeclaration": 112,
+                                "src": "1653:10:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_bool",
                                   "typeString": "bool"
@@ -867,14 +1586,14 @@
                               "rightHandSide": {
                                 "argumentTypes": null,
                                 "hexValue": "66616c7365",
-                                "id": 80,
+                                "id": 133,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
                                 "kind": "bool",
                                 "lValueRequested": false,
                                 "nodeType": "Literal",
-                                "src": "1085:5:0",
+                                "src": "1666:5:0",
                                 "subdenomination": null,
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_bool",
@@ -882,7 +1601,7 @@
                                 },
                                 "value": "false"
                               },
-                              "src": "1072:18:0",
+                              "src": "1653:18:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_bool",
                                 "typeString": "bool"
@@ -894,26 +1613,26 @@
                                 "argumentTypes": null,
                                 "baseExpression": {
                                   "argumentTypes": null,
-                                  "id": 82,
+                                  "id": 135,
                                   "name": "diplomasMapping",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 33,
-                                  "src": "1092:15:0",
+                                  "referencedDeclaration": 41,
+                                  "src": "1673:15:0",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_Diploma_$29_storage_$",
+                                    "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_Diploma_$34_storage_$",
                                     "typeString": "mapping(string memory => struct COTRUGLIDiplomaVerification.Diploma storage ref)"
                                   }
                                 },
-                                "id": 84,
+                                "id": 137,
                                 "indexExpression": {
                                   "argumentTypes": null,
-                                  "id": 83,
-                                  "name": "digitalFingerprint",
+                                  "id": 136,
+                                  "name": "_digitalFingerprint",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 56,
-                                  "src": "1108:18:0",
+                                  "referencedDeclaration": 109,
+                                  "src": "1689:19:0",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_string_memory_ptr",
                                     "typeString": "string memory"
@@ -924,54 +1643,54 @@
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "nodeType": "IndexAccess",
-                                "src": "1092:35:0",
+                                "src": "1673:36:0",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_Diploma_$29_storage",
+                                  "typeIdentifier": "t_struct$_Diploma_$34_storage",
                                   "typeString": "struct COTRUGLIDiplomaVerification.Diploma storage ref"
                                 }
                               },
-                              "id": 85,
+                              "id": 138,
                               "isConstant": false,
                               "isLValue": true,
                               "isPure": false,
                               "lValueRequested": false,
                               "memberName": "lastUpdated",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 26,
-                              "src": "1092:47:0",
+                              "referencedDeclaration": 31,
+                              "src": "1673:48:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
                               }
                             }
                           ],
-                          "id": 86,
+                          "id": 139,
                           "isConstant": false,
                           "isInlineArray": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "TupleExpression",
-                          "src": "1071:69:0",
+                          "src": "1652:70:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_tuple$_t_bool_$_t_uint256_$",
                             "typeString": "tuple(bool,uint256)"
                           }
                         },
-                        "functionReturnParameters": 62,
-                        "id": 87,
+                        "functionReturnParameters": 115,
+                        "id": 140,
                         "nodeType": "Return",
-                        "src": "1064:76:0"
+                        "src": "1645:77:0"
                       }
                     ]
                   },
-                  "id": 89,
+                  "id": 142,
                   "nodeType": "IfStatement",
-                  "src": "873:283:0",
+                  "src": "1464:270:0",
                   "trueBody": {
-                    "id": 78,
+                    "id": 131,
                     "nodeType": "Block",
-                    "src": "928:110:0",
+                    "src": "1520:103:0",
                     "statements": [
                       {
                         "expression": {
@@ -979,19 +1698,19 @@
                           "components": [
                             {
                               "argumentTypes": null,
-                              "id": 71,
+                              "id": 124,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
                               "lValueRequested": false,
                               "leftHandSide": {
                                 "argumentTypes": null,
-                                "id": 69,
+                                "id": 122,
                                 "name": "_confirmed",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 59,
-                                "src": "955:10:0",
+                                "referencedDeclaration": 112,
+                                "src": "1543:10:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_bool",
                                   "typeString": "bool"
@@ -1002,14 +1721,14 @@
                               "rightHandSide": {
                                 "argumentTypes": null,
                                 "hexValue": "74727565",
-                                "id": 70,
+                                "id": 123,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
                                 "kind": "bool",
                                 "lValueRequested": false,
                                 "nodeType": "Literal",
-                                "src": "968:4:0",
+                                "src": "1556:4:0",
                                 "subdenomination": null,
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_bool",
@@ -1017,7 +1736,7 @@
                                 },
                                 "value": "true"
                               },
-                              "src": "955:17:0",
+                              "src": "1543:17:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_bool",
                                 "typeString": "bool"
@@ -1029,26 +1748,26 @@
                                 "argumentTypes": null,
                                 "baseExpression": {
                                   "argumentTypes": null,
-                                  "id": 72,
+                                  "id": 125,
                                   "name": "diplomasMapping",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 33,
-                                  "src": "974:15:0",
+                                  "referencedDeclaration": 41,
+                                  "src": "1562:15:0",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_Diploma_$29_storage_$",
+                                    "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_Diploma_$34_storage_$",
                                     "typeString": "mapping(string memory => struct COTRUGLIDiplomaVerification.Diploma storage ref)"
                                   }
                                 },
-                                "id": 74,
+                                "id": 127,
                                 "indexExpression": {
                                   "argumentTypes": null,
-                                  "id": 73,
-                                  "name": "digitalFingerprint",
+                                  "id": 126,
+                                  "name": "_digitalFingerprint",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 56,
-                                  "src": "990:18:0",
+                                  "referencedDeclaration": 109,
+                                  "src": "1578:19:0",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_string_memory_ptr",
                                     "typeString": "string memory"
@@ -1059,44 +1778,44 @@
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "nodeType": "IndexAccess",
-                                "src": "974:35:0",
+                                "src": "1562:36:0",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_Diploma_$29_storage",
+                                  "typeIdentifier": "t_struct$_Diploma_$34_storage",
                                   "typeString": "struct COTRUGLIDiplomaVerification.Diploma storage ref"
                                 }
                               },
-                              "id": 75,
+                              "id": 128,
                               "isConstant": false,
                               "isLValue": true,
                               "isPure": false,
                               "lValueRequested": false,
                               "memberName": "lastUpdated",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 26,
-                              "src": "974:47:0",
+                              "referencedDeclaration": 31,
+                              "src": "1562:48:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
                               }
                             }
                           ],
-                          "id": 76,
+                          "id": 129,
                           "isConstant": false,
                           "isInlineArray": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "TupleExpression",
-                          "src": "954:68:0",
+                          "src": "1542:69:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_tuple$_t_bool_$_t_uint256_$",
                             "typeString": "tuple(bool,uint256)"
                           }
                         },
-                        "functionReturnParameters": 62,
-                        "id": 77,
+                        "functionReturnParameters": 115,
+                        "id": 130,
                         "nodeType": "Return",
-                        "src": "947:75:0"
+                        "src": "1535:76:0"
                       }
                     ]
                   }
@@ -1105,7 +1824,7 @@
             },
             "documentation": null,
             "functionSelector": "69b486cb",
-            "id": 91,
+            "id": 144,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -1113,18 +1832,18 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 57,
+              "id": 110,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 56,
+                  "id": 109,
                   "mutability": "mutable",
-                  "name": "digitalFingerprint",
+                  "name": "_digitalFingerprint",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 91,
-                  "src": "770:32:0",
+                  "scope": 144,
+                  "src": "1364:33:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -1132,10 +1851,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 55,
+                    "id": 108,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "770:6:0",
+                    "src": "1364:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -1145,21 +1864,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "769:34:0"
+              "src": "1363:35:0"
             },
             "returnParameters": {
-              "id": 62,
+              "id": 115,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 59,
+                  "id": 112,
                   "mutability": "mutable",
                   "name": "_confirmed",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 91,
-                  "src": "824:15:0",
+                  "scope": 144,
+                  "src": "1419:15:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1167,10 +1886,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 58,
+                    "id": 111,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "824:4:0",
+                    "src": "1419:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1181,13 +1900,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 61,
+                  "id": 114,
                   "mutability": "mutable",
                   "name": "_timestamp",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 91,
-                  "src": "841:15:0",
+                  "scope": 144,
+                  "src": "1436:15:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1195,10 +1914,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 60,
+                    "id": 113,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "841:4:0",
+                    "src": "1436:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1208,19 +1927,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "823:34:0"
+              "src": "1418:34:0"
             },
-            "scope": 103,
-            "src": "747:414:0",
+            "scope": 156,
+            "src": "1341:400:0",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 101,
+              "id": 154,
               "nodeType": "Block",
-              "src": "1209:43:0",
+              "src": "1789:43:0",
               "statements": [
                 {
                   "expression": {
@@ -1230,18 +1949,18 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 97,
+                          "id": 150,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": -15,
-                          "src": "1233:3:0",
+                          "src": "1813:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 98,
+                        "id": 151,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1249,7 +1968,7 @@
                         "memberName": "sender",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "1233:10:0",
+                        "src": "1813:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address_payable",
                           "typeString": "address payable"
@@ -1263,18 +1982,18 @@
                           "typeString": "address payable"
                         }
                       ],
-                      "id": 96,
+                      "id": 149,
                       "name": "selfdestruct",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": -21,
-                      "src": "1220:12:0",
+                      "src": "1800:12:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_selfdestruct_nonpayable$_t_address_payable_$returns$__$",
                         "typeString": "function (address payable)"
                       }
                     },
-                    "id": 99,
+                    "id": 152,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1282,79 +2001,79 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1220:24:0",
+                    "src": "1800:24:0",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 100,
+                  "id": 153,
                   "nodeType": "ExpressionStatement",
-                  "src": "1220:24:0"
+                  "src": "1800:24:0"
                 }
               ]
             },
             "documentation": null,
             "functionSelector": "fe389e09",
-            "id": 102,
+            "id": 155,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 94,
+                "id": 147,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 93,
+                  "id": 146,
                   "name": "isOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 24,
-                  "src": "1201:7:0",
+                  "referencedDeclaration": 29,
+                  "src": "1781:7:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
                     "typeString": "modifier ()"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "1201:7:0"
+                "src": "1781:7:0"
               }
             ],
             "name": "removeContract",
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 92,
+              "id": 145,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1191:2:0"
+              "src": "1771:2:0"
             },
             "returnParameters": {
-              "id": 95,
+              "id": 148,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1209:0:0"
+              "src": "1789:0:0"
             },
-            "scope": 103,
-            "src": "1168:84:0",
+            "scope": 156,
+            "src": "1748:84:0",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 104,
-        "src": "180:1081:0"
+        "scope": 157,
+        "src": "180:1661:0"
       }
     ],
-    "src": "153:1108:0"
+    "src": "153:1688:0"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "project:/contracts/COTRUGLIDiplomaVerification.sol",
       "exportedSymbols": {
         "COTRUGLIDiplomaVerification": [
-          103
+          156
         ]
       },
       "license": "MIT"
@@ -1386,10 +2105,10 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            103
+            156
           ],
           "name": "COTRUGLIDiplomaVerification",
-          "scope": 104
+          "scope": 157
         },
         "children": [
           {
@@ -1398,7 +2117,7 @@
               "mutability": "mutable",
               "name": "owner",
               "overrides": null,
-              "scope": 103,
+              "scope": 156,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "address",
@@ -1432,7 +2151,7 @@
               ],
               "name": "",
               "overrides": null,
-              "scope": 103,
+              "scope": 156,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "public"
@@ -1529,16 +2248,94 @@
                     "id": 10,
                     "name": "ExpressionStatement",
                     "src": "280:18:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address_payable",
+                                  "typeString": "address payable"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 60,
+                              "type": "function (address)",
+                              "value": "approveAddress"
+                            },
+                            "id": 11,
+                            "name": "Identifier",
+                            "src": "308:14:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": -15,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 12,
+                                "name": "Identifier",
+                                "src": "323:3:0"
+                              }
+                            ],
+                            "id": 13,
+                            "name": "MemberAccess",
+                            "src": "323:10:0"
+                          }
+                        ],
+                        "id": 14,
+                        "name": "FunctionCall",
+                        "src": "308:26:0"
+                      }
+                    ],
+                    "id": 15,
+                    "name": "ExpressionStatement",
+                    "src": "308:26:0"
                   }
                 ],
-                "id": 11,
+                "id": 16,
                 "name": "Block",
-                "src": "270:36:0"
+                "src": "270:72:0"
               }
             ],
-            "id": 12,
+            "id": 17,
             "name": "FunctionDefinition",
-            "src": "256:50:0"
+            "src": "256:86:0"
           },
           {
             "attributes": {
@@ -1556,9 +2353,9 @@
                   ]
                 },
                 "children": [],
-                "id": 13,
+                "id": 18,
                 "name": "ParameterList",
-                "src": "334:2:0"
+                "src": "370:2:0"
               },
               {
                 "children": [
@@ -1604,14 +2401,14 @@
                                   "type": "msg",
                                   "value": "msg"
                                 },
-                                "id": 14,
+                                "id": 19,
                                 "name": "Identifier",
-                                "src": "343:3:0"
+                                "src": "379:3:0"
                               }
                             ],
-                            "id": 15,
+                            "id": 20,
                             "name": "MemberAccess",
-                            "src": "343:10:0"
+                            "src": "379:10:0"
                           },
                           {
                             "attributes": {
@@ -1623,14 +2420,14 @@
                               "type": "address",
                               "value": "owner"
                             },
-                            "id": 16,
+                            "id": 21,
                             "name": "Identifier",
-                            "src": "357:5:0"
+                            "src": "393:5:0"
                           }
                         ],
-                        "id": 17,
+                        "id": 22,
                         "name": "BinaryOperation",
-                        "src": "343:19:0"
+                        "src": "379:19:0"
                       },
                       {
                         "children": [
@@ -1666,45 +2463,45 @@
                                   "type": "function () pure",
                                   "value": "revert"
                                 },
-                                "id": 18,
+                                "id": 23,
                                 "name": "Identifier",
-                                "src": "364:6:0"
+                                "src": "400:6:0"
                               }
                             ],
-                            "id": 19,
+                            "id": 24,
                             "name": "FunctionCall",
-                            "src": "364:8:0"
+                            "src": "400:8:0"
                           }
                         ],
-                        "id": 20,
+                        "id": 25,
                         "name": "ExpressionStatement",
-                        "src": "364:8:0"
+                        "src": "400:8:0"
                       }
                     ],
-                    "id": 21,
+                    "id": 26,
                     "name": "IfStatement",
-                    "src": "339:33:0"
+                    "src": "375:33:0"
                   },
                   {
-                    "id": 22,
+                    "id": 27,
                     "name": "PlaceholderStatement",
-                    "src": "374:1:0"
+                    "src": "410:1:0"
                   }
                 ],
-                "id": 23,
+                "id": 28,
                 "name": "Block",
-                "src": "337:41:0"
+                "src": "373:41:0"
               }
             ],
-            "id": 24,
+            "id": 29,
             "name": "ModifierDefinition",
-            "src": "318:60:0"
+            "src": "354:60:0"
           },
           {
             "attributes": {
               "canonicalName": "COTRUGLIDiplomaVerification.Diploma",
               "name": "Diploma",
-              "scope": 103,
+              "scope": 156,
               "visibility": "public"
             },
             "children": [
@@ -1714,7 +2511,7 @@
                   "mutability": "mutable",
                   "name": "lastUpdated",
                   "overrides": null,
-                  "scope": 29,
+                  "scope": 34,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint256",
@@ -1727,14 +2524,14 @@
                       "name": "uint",
                       "type": "uint256"
                     },
-                    "id": 25,
+                    "id": 30,
                     "name": "ElementaryTypeName",
-                    "src": "412:4:0"
+                    "src": "448:4:0"
                   }
                 ],
-                "id": 26,
+                "id": 31,
                 "name": "VariableDeclaration",
-                "src": "412:16:0"
+                "src": "448:16:0"
               },
               {
                 "attributes": {
@@ -1742,7 +2539,7 @@
                   "mutability": "mutable",
                   "name": "exists",
                   "overrides": null,
-                  "scope": 29,
+                  "scope": 34,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "bool",
@@ -1755,19 +2552,60 @@
                       "name": "bool",
                       "type": "bool"
                     },
-                    "id": 27,
+                    "id": 32,
                     "name": "ElementaryTypeName",
-                    "src": "439:4:0"
+                    "src": "475:4:0"
                   }
                 ],
-                "id": 28,
+                "id": 33,
                 "name": "VariableDeclaration",
-                "src": "439:11:0"
+                "src": "475:11:0"
               }
             ],
-            "id": 29,
+            "id": 34,
             "name": "StructDefinition",
-            "src": "386:72:0"
+            "src": "422:72:0"
+          },
+          {
+            "attributes": {
+              "canonicalName": "COTRUGLIDiplomaVerification.ApprovedAddresses",
+              "name": "ApprovedAddresses",
+              "scope": 156,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "isApproved",
+                  "overrides": null,
+                  "scope": 37,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bool",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bool",
+                      "type": "bool"
+                    },
+                    "id": 35,
+                    "name": "ElementaryTypeName",
+                    "src": "537:4:0"
+                  }
+                ],
+                "id": 36,
+                "name": "VariableDeclaration",
+                "src": "537:15:0"
+              }
+            ],
+            "id": 37,
+            "name": "StructDefinition",
+            "src": "502:58:0"
           },
           {
             "attributes": {
@@ -1775,7 +2613,7 @@
               "mutability": "mutable",
               "name": "diplomasMapping",
               "overrides": null,
-              "scope": 103,
+              "scope": 156,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "mapping(string => struct COTRUGLIDiplomaVerification.Diploma)",
@@ -1793,44 +2631,90 @@
                       "name": "string",
                       "type": "string"
                     },
-                    "id": 30,
+                    "id": 38,
                     "name": "ElementaryTypeName",
-                    "src": "479:6:0"
+                    "src": "581:6:0"
                   },
                   {
                     "attributes": {
                       "contractScope": null,
                       "name": "Diploma",
-                      "referencedDeclaration": 29,
+                      "referencedDeclaration": 34,
                       "type": "struct COTRUGLIDiplomaVerification.Diploma"
                     },
-                    "id": 31,
+                    "id": 39,
                     "name": "UserDefinedTypeName",
-                    "src": "490:7:0"
+                    "src": "592:7:0"
                   }
                 ],
-                "id": 32,
+                "id": 40,
                 "name": "Mapping",
-                "src": "470:28:0"
+                "src": "572:28:0"
               }
             ],
-            "id": 33,
+            "id": 41,
             "name": "VariableDeclaration",
-            "src": "470:44:0"
+            "src": "572:44:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "mutability": "mutable",
+              "name": "approvedAddressesMapping",
+              "overrides": null,
+              "scope": 156,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => struct COTRUGLIDiplomaVerification.ApprovedAddresses)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => struct COTRUGLIDiplomaVerification.ApprovedAddresses)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 42,
+                    "name": "ElementaryTypeName",
+                    "src": "632:7:0"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "ApprovedAddresses",
+                      "referencedDeclaration": 37,
+                      "type": "struct COTRUGLIDiplomaVerification.ApprovedAddresses"
+                    },
+                    "id": 43,
+                    "name": "UserDefinedTypeName",
+                    "src": "643:17:0"
+                  }
+                ],
+                "id": 44,
+                "name": "Mapping",
+                "src": "623:38:0"
+              }
+            ],
+            "id": 45,
+            "name": "VariableDeclaration",
+            "src": "623:63:0"
           },
           {
             "attributes": {
               "documentation": null,
-              "functionSelector": "483a1105",
+              "functionSelector": "fabf657a",
               "implemented": true,
               "isConstructor": false,
               "kind": "function",
-              "modifiers": [
-                null
-              ],
-              "name": "startSignatures",
+              "name": "approveAddress",
               "overrides": null,
-              "scope": 103,
+              "scope": 156,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "public"
@@ -1842,34 +2726,35 @@
                     "attributes": {
                       "constant": false,
                       "mutability": "mutable",
-                      "name": "digitalFingerprint",
+                      "name": "_toApprove",
                       "overrides": null,
-                      "scope": 54,
+                      "scope": 60,
                       "stateVariable": false,
-                      "storageLocation": "memory",
-                      "type": "string",
+                      "storageLocation": "default",
+                      "type": "address",
                       "value": null,
                       "visibility": "internal"
                     },
                     "children": [
                       {
                         "attributes": {
-                          "name": "string",
-                          "type": "string"
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
                         },
-                        "id": 34,
+                        "id": 46,
                         "name": "ElementaryTypeName",
-                        "src": "552:6:0"
+                        "src": "720:7:0"
                       }
                     ],
-                    "id": 35,
+                    "id": 47,
                     "name": "VariableDeclaration",
-                    "src": "552:32:0"
+                    "src": "720:18:0"
                   }
                 ],
-                "id": 36,
+                "id": 48,
                 "name": "ParameterList",
-                "src": "551:34:0"
+                "src": "719:20:0"
               },
               {
                 "attributes": {
@@ -1878,9 +2763,33 @@
                   ]
                 },
                 "children": [],
-                "id": 37,
+                "id": 51,
                 "name": "ParameterList",
-                "src": "593:0:0"
+                "src": "755:0:0"
+              },
+              {
+                "attributes": {
+                  "arguments": null
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 29,
+                      "type": "modifier ()",
+                      "value": "isOwner"
+                    },
+                    "id": 49,
+                    "name": "Identifier",
+                    "src": "747:7:0"
+                  }
+                ],
+                "id": 50,
+                "name": "ModifierInvocation",
+                "src": "747:7:0"
               },
               {
                 "children": [
@@ -1904,8 +2813,565 @@
                               "isLValue": true,
                               "isPure": false,
                               "lValueRequested": true,
+                              "member_name": "isApproved",
+                              "referencedDeclaration": 36,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct COTRUGLIDiplomaVerification.ApprovedAddresses storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 45,
+                                      "type": "mapping(address => struct COTRUGLIDiplomaVerification.ApprovedAddresses storage ref)",
+                                      "value": "approvedAddressesMapping"
+                                    },
+                                    "id": 52,
+                                    "name": "Identifier",
+                                    "src": "766:24:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 47,
+                                      "type": "address",
+                                      "value": "_toApprove"
+                                    },
+                                    "id": 53,
+                                    "name": "Identifier",
+                                    "src": "791:10:0"
+                                  }
+                                ],
+                                "id": 54,
+                                "name": "IndexAccess",
+                                "src": "766:36:0"
+                              }
+                            ],
+                            "id": 55,
+                            "name": "MemberAccess",
+                            "src": "766:47:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "74727565",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "true"
+                            },
+                            "id": 56,
+                            "name": "Literal",
+                            "src": "816:4:0"
+                          }
+                        ],
+                        "id": 57,
+                        "name": "Assignment",
+                        "src": "766:54:0"
+                      }
+                    ],
+                    "id": 58,
+                    "name": "ExpressionStatement",
+                    "src": "766:54:0"
+                  }
+                ],
+                "id": 59,
+                "name": "Block",
+                "src": "755:73:0"
+              }
+            ],
+            "id": 60,
+            "name": "FunctionDefinition",
+            "src": "696:132:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "20f1d85b",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "removeApprovedAddress",
+              "overrides": null,
+              "scope": 156,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_toRemove",
+                      "overrides": null,
+                      "scope": 75,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 61,
+                        "name": "ElementaryTypeName",
+                        "src": "867:7:0"
+                      }
+                    ],
+                    "id": 62,
+                    "name": "VariableDeclaration",
+                    "src": "867:17:0"
+                  }
+                ],
+                "id": 63,
+                "name": "ParameterList",
+                "src": "866:19:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 66,
+                "name": "ParameterList",
+                "src": "901:0:0"
+              },
+              {
+                "attributes": {
+                  "arguments": null
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 29,
+                      "type": "modifier ()",
+                      "value": "isOwner"
+                    },
+                    "id": 64,
+                    "name": "Identifier",
+                    "src": "893:7:0"
+                  }
+                ],
+                "id": 65,
+                "name": "ModifierInvocation",
+                "src": "893:7:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "isApproved",
+                              "referencedDeclaration": 36,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct COTRUGLIDiplomaVerification.ApprovedAddresses storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 45,
+                                      "type": "mapping(address => struct COTRUGLIDiplomaVerification.ApprovedAddresses storage ref)",
+                                      "value": "approvedAddressesMapping"
+                                    },
+                                    "id": 67,
+                                    "name": "Identifier",
+                                    "src": "912:24:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 62,
+                                      "type": "address",
+                                      "value": "_toRemove"
+                                    },
+                                    "id": 68,
+                                    "name": "Identifier",
+                                    "src": "937:9:0"
+                                  }
+                                ],
+                                "id": 69,
+                                "name": "IndexAccess",
+                                "src": "912:35:0"
+                              }
+                            ],
+                            "id": 70,
+                            "name": "MemberAccess",
+                            "src": "912:46:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "66616c7365",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "false"
+                            },
+                            "id": 71,
+                            "name": "Literal",
+                            "src": "961:5:0"
+                          }
+                        ],
+                        "id": 72,
+                        "name": "Assignment",
+                        "src": "912:54:0"
+                      }
+                    ],
+                    "id": 73,
+                    "name": "ExpressionStatement",
+                    "src": "912:54:0"
+                  }
+                ],
+                "id": 74,
+                "name": "Block",
+                "src": "901:73:0"
+              }
+            ],
+            "id": 75,
+            "name": "FunctionDefinition",
+            "src": "836:138:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "functionSelector": "483a1105",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "startSignatures",
+              "overrides": null,
+              "scope": 156,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_digitalFingerprint",
+                      "overrides": null,
+                      "scope": 107,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 76,
+                        "name": "ElementaryTypeName",
+                        "src": "1011:6:0"
+                      }
+                    ],
+                    "id": 77,
+                    "name": "VariableDeclaration",
+                    "src": "1011:33:0"
+                  }
+                ],
+                "id": 78,
+                "name": "ParameterList",
+                "src": "1010:35:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 79,
+                "name": "ParameterList",
+                "src": "1053:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_5975663d370f1aebb2b88d314e3cf55c5ddc9497756ac0b07fc376619bbc6bda",
+                                  "typeString": "literal_string \"This address is not approved to evoke this function\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                -18,
+                                -18
+                              ],
+                              "referencedDeclaration": -18,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 80,
+                            "name": "Identifier",
+                            "src": "1064:7:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_bool",
+                                "typeString": "bool"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "==",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "isApproved",
+                                  "referencedDeclaration": 36,
+                                  "type": "bool"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "type": "struct COTRUGLIDiplomaVerification.ApprovedAddresses storage ref"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 45,
+                                          "type": "mapping(address => struct COTRUGLIDiplomaVerification.ApprovedAddresses storage ref)",
+                                          "value": "approvedAddressesMapping"
+                                        },
+                                        "id": 81,
+                                        "name": "Identifier",
+                                        "src": "1072:24:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "member_name": "sender",
+                                          "referencedDeclaration": null,
+                                          "type": "address payable"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": -15,
+                                              "type": "msg",
+                                              "value": "msg"
+                                            },
+                                            "id": 82,
+                                            "name": "Identifier",
+                                            "src": "1097:3:0"
+                                          }
+                                        ],
+                                        "id": 83,
+                                        "name": "MemberAccess",
+                                        "src": "1097:10:0"
+                                      }
+                                    ],
+                                    "id": 84,
+                                    "name": "IndexAccess",
+                                    "src": "1072:36:0"
+                                  }
+                                ],
+                                "id": 85,
+                                "name": "MemberAccess",
+                                "src": "1072:47:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "74727565",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "bool",
+                                  "type": "bool",
+                                  "value": "true"
+                                },
+                                "id": 86,
+                                "name": "Literal",
+                                "src": "1123:4:0"
+                              }
+                            ],
+                            "id": 87,
+                            "name": "BinaryOperation",
+                            "src": "1072:55:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "546869732061646472657373206973206e6f7420617070726f76656420746f2065766f6b6520746869732066756e6374696f6e",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"This address is not approved to evoke this function\"",
+                              "value": "This address is not approved to evoke this function"
+                            },
+                            "id": 88,
+                            "name": "Literal",
+                            "src": "1129:53:0"
+                          }
+                        ],
+                        "id": 89,
+                        "name": "FunctionCall",
+                        "src": "1064:119:0"
+                      }
+                    ],
+                    "id": 90,
+                    "name": "ExpressionStatement",
+                    "src": "1064:119:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
                               "member_name": "exists",
-                              "referencedDeclaration": 28,
+                              "referencedDeclaration": 33,
                               "type": "bool"
                             },
                             "children": [
@@ -1925,13 +3391,13 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 33,
+                                      "referencedDeclaration": 41,
                                       "type": "mapping(string memory => struct COTRUGLIDiplomaVerification.Diploma storage ref)",
                                       "value": "diplomasMapping"
                                     },
-                                    "id": 38,
+                                    "id": 91,
                                     "name": "Identifier",
-                                    "src": "604:15:0"
+                                    "src": "1194:15:0"
                                   },
                                   {
                                     "attributes": {
@@ -1939,23 +3405,23 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 35,
+                                      "referencedDeclaration": 77,
                                       "type": "string memory",
-                                      "value": "digitalFingerprint"
+                                      "value": "_digitalFingerprint"
                                     },
-                                    "id": 39,
+                                    "id": 92,
                                     "name": "Identifier",
-                                    "src": "620:18:0"
+                                    "src": "1210:19:0"
                                   }
                                 ],
-                                "id": 40,
+                                "id": 93,
                                 "name": "IndexAccess",
-                                "src": "604:35:0"
+                                "src": "1194:36:0"
                               }
                             ],
-                            "id": 41,
+                            "id": 94,
                             "name": "MemberAccess",
-                            "src": "604:42:0"
+                            "src": "1194:43:0"
                           },
                           {
                             "attributes": {
@@ -1970,19 +3436,19 @@
                               "type": "bool",
                               "value": "true"
                             },
-                            "id": 42,
+                            "id": 95,
                             "name": "Literal",
-                            "src": "649:4:0"
+                            "src": "1240:4:0"
                           }
                         ],
-                        "id": 43,
+                        "id": 96,
                         "name": "Assignment",
-                        "src": "604:49:0"
+                        "src": "1194:50:0"
                       }
                     ],
-                    "id": 44,
+                    "id": 97,
                     "name": "ExpressionStatement",
-                    "src": "604:49:0"
+                    "src": "1194:50:0"
                   },
                   {
                     "children": [
@@ -2005,7 +3471,7 @@
                               "isPure": false,
                               "lValueRequested": true,
                               "member_name": "lastUpdated",
-                              "referencedDeclaration": 26,
+                              "referencedDeclaration": 31,
                               "type": "uint256"
                             },
                             "children": [
@@ -2025,13 +3491,13 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 33,
+                                      "referencedDeclaration": 41,
                                       "type": "mapping(string memory => struct COTRUGLIDiplomaVerification.Diploma storage ref)",
                                       "value": "diplomasMapping"
                                     },
-                                    "id": 45,
+                                    "id": 98,
                                     "name": "Identifier",
-                                    "src": "664:15:0"
+                                    "src": "1255:15:0"
                                   },
                                   {
                                     "attributes": {
@@ -2039,23 +3505,23 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 35,
+                                      "referencedDeclaration": 77,
                                       "type": "string memory",
-                                      "value": "digitalFingerprint"
+                                      "value": "_digitalFingerprint"
                                     },
-                                    "id": 46,
+                                    "id": 99,
                                     "name": "Identifier",
-                                    "src": "680:18:0"
+                                    "src": "1271:19:0"
                                   }
                                 ],
-                                "id": 47,
+                                "id": 100,
                                 "name": "IndexAccess",
-                                "src": "664:35:0"
+                                "src": "1255:36:0"
                               }
                             ],
-                            "id": 48,
+                            "id": 101,
                             "name": "MemberAccess",
-                            "src": "664:47:0"
+                            "src": "1255:48:0"
                           },
                           {
                             "attributes": {
@@ -2079,34 +3545,34 @@
                                   "type": "block",
                                   "value": "block"
                                 },
-                                "id": 49,
+                                "id": 102,
                                 "name": "Identifier",
-                                "src": "714:5:0"
+                                "src": "1306:5:0"
                               }
                             ],
-                            "id": 50,
+                            "id": 103,
                             "name": "MemberAccess",
-                            "src": "714:15:0"
+                            "src": "1306:15:0"
                           }
                         ],
-                        "id": 51,
+                        "id": 104,
                         "name": "Assignment",
-                        "src": "664:65:0"
+                        "src": "1255:66:0"
                       }
                     ],
-                    "id": 52,
+                    "id": 105,
                     "name": "ExpressionStatement",
-                    "src": "664:65:0"
+                    "src": "1255:66:0"
                   }
                 ],
-                "id": 53,
+                "id": 106,
                 "name": "Block",
-                "src": "593:144:0"
+                "src": "1053:276:0"
               }
             ],
-            "id": 54,
+            "id": 107,
             "name": "FunctionDefinition",
-            "src": "527:210:0"
+            "src": "986:343:0"
           },
           {
             "attributes": {
@@ -2120,7 +3586,7 @@
               ],
               "name": "verifyDiploma",
               "overrides": null,
-              "scope": 103,
+              "scope": 156,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "public"
@@ -2132,9 +3598,9 @@
                     "attributes": {
                       "constant": false,
                       "mutability": "mutable",
-                      "name": "digitalFingerprint",
+                      "name": "_digitalFingerprint",
                       "overrides": null,
-                      "scope": 91,
+                      "scope": 144,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "string",
@@ -2147,19 +3613,19 @@
                           "name": "string",
                           "type": "string"
                         },
-                        "id": 55,
+                        "id": 108,
                         "name": "ElementaryTypeName",
-                        "src": "770:6:0"
+                        "src": "1364:6:0"
                       }
                     ],
-                    "id": 56,
+                    "id": 109,
                     "name": "VariableDeclaration",
-                    "src": "770:32:0"
+                    "src": "1364:33:0"
                   }
                 ],
-                "id": 57,
+                "id": 110,
                 "name": "ParameterList",
-                "src": "769:34:0"
+                "src": "1363:35:0"
               },
               {
                 "children": [
@@ -2169,7 +3635,7 @@
                       "mutability": "mutable",
                       "name": "_confirmed",
                       "overrides": null,
-                      "scope": 91,
+                      "scope": 144,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -2182,14 +3648,14 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 58,
+                        "id": 111,
                         "name": "ElementaryTypeName",
-                        "src": "824:4:0"
+                        "src": "1419:4:0"
                       }
                     ],
-                    "id": 59,
+                    "id": 112,
                     "name": "VariableDeclaration",
-                    "src": "824:15:0"
+                    "src": "1419:15:0"
                   },
                   {
                     "attributes": {
@@ -2197,7 +3663,7 @@
                       "mutability": "mutable",
                       "name": "_timestamp",
                       "overrides": null,
-                      "scope": 91,
+                      "scope": 144,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -2210,19 +3676,19 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 60,
+                        "id": 113,
                         "name": "ElementaryTypeName",
-                        "src": "841:4:0"
+                        "src": "1436:4:0"
                       }
                     ],
-                    "id": 61,
+                    "id": 114,
                     "name": "VariableDeclaration",
-                    "src": "841:15:0"
+                    "src": "1436:15:0"
                   }
                 ],
-                "id": 62,
+                "id": 115,
                 "name": "ParameterList",
-                "src": "823:34:0"
+                "src": "1418:34:0"
               },
               {
                 "children": [
@@ -2251,7 +3717,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "exists",
-                              "referencedDeclaration": 28,
+                              "referencedDeclaration": 33,
                               "type": "bool"
                             },
                             "children": [
@@ -2271,13 +3737,13 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 33,
+                                      "referencedDeclaration": 41,
                                       "type": "mapping(string memory => struct COTRUGLIDiplomaVerification.Diploma storage ref)",
                                       "value": "diplomasMapping"
                                     },
-                                    "id": 63,
+                                    "id": 116,
                                     "name": "Identifier",
-                                    "src": "877:15:0"
+                                    "src": "1468:15:0"
                                   },
                                   {
                                     "attributes": {
@@ -2285,23 +3751,23 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 56,
+                                      "referencedDeclaration": 109,
                                       "type": "string memory",
-                                      "value": "digitalFingerprint"
+                                      "value": "_digitalFingerprint"
                                     },
-                                    "id": 64,
+                                    "id": 117,
                                     "name": "Identifier",
-                                    "src": "893:18:0"
+                                    "src": "1484:19:0"
                                   }
                                 ],
-                                "id": 65,
+                                "id": 118,
                                 "name": "IndexAccess",
-                                "src": "877:35:0"
+                                "src": "1468:36:0"
                               }
                             ],
-                            "id": 66,
+                            "id": 119,
                             "name": "MemberAccess",
-                            "src": "877:42:0"
+                            "src": "1468:43:0"
                           },
                           {
                             "attributes": {
@@ -2316,20 +3782,20 @@
                               "type": "bool",
                               "value": "true"
                             },
-                            "id": 67,
+                            "id": 120,
                             "name": "Literal",
-                            "src": "923:4:0"
+                            "src": "1515:4:0"
                           }
                         ],
-                        "id": 68,
+                        "id": 121,
                         "name": "BinaryOperation",
-                        "src": "877:50:0"
+                        "src": "1468:51:0"
                       },
                       {
                         "children": [
                           {
                             "attributes": {
-                              "functionReturnParameters": 62
+                              "functionReturnParameters": 115
                             },
                             "children": [
                               {
@@ -2360,13 +3826,13 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 59,
+                                          "referencedDeclaration": 112,
                                           "type": "bool",
                                           "value": "_confirmed"
                                         },
-                                        "id": 69,
+                                        "id": 122,
                                         "name": "Identifier",
-                                        "src": "955:10:0"
+                                        "src": "1543:10:0"
                                       },
                                       {
                                         "attributes": {
@@ -2381,14 +3847,14 @@
                                           "type": "bool",
                                           "value": "true"
                                         },
-                                        "id": 70,
+                                        "id": 123,
                                         "name": "Literal",
-                                        "src": "968:4:0"
+                                        "src": "1556:4:0"
                                       }
                                     ],
-                                    "id": 71,
+                                    "id": 124,
                                     "name": "Assignment",
-                                    "src": "955:17:0"
+                                    "src": "1543:17:0"
                                   },
                                   {
                                     "attributes": {
@@ -2398,7 +3864,7 @@
                                       "isPure": false,
                                       "lValueRequested": false,
                                       "member_name": "lastUpdated",
-                                      "referencedDeclaration": 26,
+                                      "referencedDeclaration": 31,
                                       "type": "uint256"
                                     },
                                     "children": [
@@ -2418,13 +3884,13 @@
                                               "overloadedDeclarations": [
                                                 null
                                               ],
-                                              "referencedDeclaration": 33,
+                                              "referencedDeclaration": 41,
                                               "type": "mapping(string memory => struct COTRUGLIDiplomaVerification.Diploma storage ref)",
                                               "value": "diplomasMapping"
                                             },
-                                            "id": 72,
+                                            "id": 125,
                                             "name": "Identifier",
-                                            "src": "974:15:0"
+                                            "src": "1562:15:0"
                                           },
                                           {
                                             "attributes": {
@@ -2432,44 +3898,44 @@
                                               "overloadedDeclarations": [
                                                 null
                                               ],
-                                              "referencedDeclaration": 56,
+                                              "referencedDeclaration": 109,
                                               "type": "string memory",
-                                              "value": "digitalFingerprint"
+                                              "value": "_digitalFingerprint"
                                             },
-                                            "id": 73,
+                                            "id": 126,
                                             "name": "Identifier",
-                                            "src": "990:18:0"
+                                            "src": "1578:19:0"
                                           }
                                         ],
-                                        "id": 74,
+                                        "id": 127,
                                         "name": "IndexAccess",
-                                        "src": "974:35:0"
+                                        "src": "1562:36:0"
                                       }
                                     ],
-                                    "id": 75,
+                                    "id": 128,
                                     "name": "MemberAccess",
-                                    "src": "974:47:0"
+                                    "src": "1562:48:0"
                                   }
                                 ],
-                                "id": 76,
+                                "id": 129,
                                 "name": "TupleExpression",
-                                "src": "954:68:0"
+                                "src": "1542:69:0"
                               }
                             ],
-                            "id": 77,
+                            "id": 130,
                             "name": "Return",
-                            "src": "947:75:0"
+                            "src": "1535:76:0"
                           }
                         ],
-                        "id": 78,
+                        "id": 131,
                         "name": "Block",
-                        "src": "928:110:0"
+                        "src": "1520:103:0"
                       },
                       {
                         "children": [
                           {
                             "attributes": {
-                              "functionReturnParameters": 62
+                              "functionReturnParameters": 115
                             },
                             "children": [
                               {
@@ -2500,13 +3966,13 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 59,
+                                          "referencedDeclaration": 112,
                                           "type": "bool",
                                           "value": "_confirmed"
                                         },
-                                        "id": 79,
+                                        "id": 132,
                                         "name": "Identifier",
-                                        "src": "1072:10:0"
+                                        "src": "1653:10:0"
                                       },
                                       {
                                         "attributes": {
@@ -2521,14 +3987,14 @@
                                           "type": "bool",
                                           "value": "false"
                                         },
-                                        "id": 80,
+                                        "id": 133,
                                         "name": "Literal",
-                                        "src": "1085:5:0"
+                                        "src": "1666:5:0"
                                       }
                                     ],
-                                    "id": 81,
+                                    "id": 134,
                                     "name": "Assignment",
-                                    "src": "1072:18:0"
+                                    "src": "1653:18:0"
                                   },
                                   {
                                     "attributes": {
@@ -2538,7 +4004,7 @@
                                       "isPure": false,
                                       "lValueRequested": false,
                                       "member_name": "lastUpdated",
-                                      "referencedDeclaration": 26,
+                                      "referencedDeclaration": 31,
                                       "type": "uint256"
                                     },
                                     "children": [
@@ -2558,13 +4024,13 @@
                                               "overloadedDeclarations": [
                                                 null
                                               ],
-                                              "referencedDeclaration": 33,
+                                              "referencedDeclaration": 41,
                                               "type": "mapping(string memory => struct COTRUGLIDiplomaVerification.Diploma storage ref)",
                                               "value": "diplomasMapping"
                                             },
-                                            "id": 82,
+                                            "id": 135,
                                             "name": "Identifier",
-                                            "src": "1092:15:0"
+                                            "src": "1673:15:0"
                                           },
                                           {
                                             "attributes": {
@@ -2572,53 +4038,53 @@
                                               "overloadedDeclarations": [
                                                 null
                                               ],
-                                              "referencedDeclaration": 56,
+                                              "referencedDeclaration": 109,
                                               "type": "string memory",
-                                              "value": "digitalFingerprint"
+                                              "value": "_digitalFingerprint"
                                             },
-                                            "id": 83,
+                                            "id": 136,
                                             "name": "Identifier",
-                                            "src": "1108:18:0"
+                                            "src": "1689:19:0"
                                           }
                                         ],
-                                        "id": 84,
+                                        "id": 137,
                                         "name": "IndexAccess",
-                                        "src": "1092:35:0"
+                                        "src": "1673:36:0"
                                       }
                                     ],
-                                    "id": 85,
+                                    "id": 138,
                                     "name": "MemberAccess",
-                                    "src": "1092:47:0"
+                                    "src": "1673:48:0"
                                   }
                                 ],
-                                "id": 86,
+                                "id": 139,
                                 "name": "TupleExpression",
-                                "src": "1071:69:0"
+                                "src": "1652:70:0"
                               }
                             ],
-                            "id": 87,
+                            "id": 140,
                             "name": "Return",
-                            "src": "1064:76:0"
+                            "src": "1645:77:0"
                           }
                         ],
-                        "id": 88,
+                        "id": 141,
                         "name": "Block",
-                        "src": "1045:111:0"
+                        "src": "1630:104:0"
                       }
                     ],
-                    "id": 89,
+                    "id": 142,
                     "name": "IfStatement",
-                    "src": "873:283:0"
+                    "src": "1464:270:0"
                   }
                 ],
-                "id": 90,
+                "id": 143,
                 "name": "Block",
-                "src": "858:303:0"
+                "src": "1453:288:0"
               }
             ],
-            "id": 91,
+            "id": 144,
             "name": "FunctionDefinition",
-            "src": "747:414:0"
+            "src": "1341:400:0"
           },
           {
             "attributes": {
@@ -2629,7 +4095,7 @@
               "kind": "function",
               "name": "removeContract",
               "overrides": null,
-              "scope": 103,
+              "scope": 156,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "public"
@@ -2642,9 +4108,9 @@
                   ]
                 },
                 "children": [],
-                "id": 92,
+                "id": 145,
                 "name": "ParameterList",
-                "src": "1191:2:0"
+                "src": "1771:2:0"
               },
               {
                 "attributes": {
@@ -2653,9 +4119,9 @@
                   ]
                 },
                 "children": [],
-                "id": 95,
+                "id": 148,
                 "name": "ParameterList",
-                "src": "1209:0:0"
+                "src": "1789:0:0"
               },
               {
                 "attributes": {
@@ -2668,18 +4134,18 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 24,
+                      "referencedDeclaration": 29,
                       "type": "modifier ()",
                       "value": "isOwner"
                     },
-                    "id": 93,
+                    "id": 146,
                     "name": "Identifier",
-                    "src": "1201:7:0"
+                    "src": "1781:7:0"
                   }
                 ],
-                "id": 94,
+                "id": 147,
                 "name": "ModifierInvocation",
-                "src": "1201:7:0"
+                "src": "1781:7:0"
               },
               {
                 "children": [
@@ -2716,9 +4182,9 @@
                               "type": "function (address payable)",
                               "value": "selfdestruct"
                             },
-                            "id": 96,
+                            "id": 149,
                             "name": "Identifier",
-                            "src": "1220:12:0"
+                            "src": "1800:12:0"
                           },
                           {
                             "attributes": {
@@ -2742,44 +4208,44 @@
                                   "type": "msg",
                                   "value": "msg"
                                 },
-                                "id": 97,
+                                "id": 150,
                                 "name": "Identifier",
-                                "src": "1233:3:0"
+                                "src": "1813:3:0"
                               }
                             ],
-                            "id": 98,
+                            "id": 151,
                             "name": "MemberAccess",
-                            "src": "1233:10:0"
+                            "src": "1813:10:0"
                           }
                         ],
-                        "id": 99,
+                        "id": 152,
                         "name": "FunctionCall",
-                        "src": "1220:24:0"
+                        "src": "1800:24:0"
                       }
                     ],
-                    "id": 100,
+                    "id": 153,
                     "name": "ExpressionStatement",
-                    "src": "1220:24:0"
+                    "src": "1800:24:0"
                   }
                 ],
-                "id": 101,
+                "id": 154,
                 "name": "Block",
-                "src": "1209:43:0"
+                "src": "1789:43:0"
               }
             ],
-            "id": 102,
+            "id": 155,
             "name": "FunctionDefinition",
-            "src": "1168:84:0"
+            "src": "1748:84:0"
           }
         ],
-        "id": 103,
+        "id": 156,
         "name": "ContractDefinition",
-        "src": "180:1081:0"
+        "src": "180:1661:0"
       }
     ],
-    "id": 104,
+    "id": 157,
     "name": "SourceUnit",
-    "src": "153:1108:0"
+    "src": "153:1688:0"
   },
   "compiler": {
     "name": "solc",
@@ -2787,7 +4253,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2022-05-11T21:53:16.173Z",
+  "updatedAt": "2022-05-16T11:47:58.389Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

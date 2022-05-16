@@ -75,7 +75,6 @@ const DetailsCard = ({
 
   const onAddToBlockchain = async () => {
     const startSignaturesHex = await startSignatures(digitalSignature)
-    console.log(startSignaturesHex)
 
     if (!connectedAccount) {
       toast.info(`Connect your Taquin wallet to interact with blockchain!`, {
