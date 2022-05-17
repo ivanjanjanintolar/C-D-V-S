@@ -39,6 +39,7 @@ contract COTRUGLIDiplomaVerification {
     
     function startSignatures(string memory _digitalFingerprint) public {
         require(approvedAddressesMapping[msg.sender].isApproved == true, 'This address is not approved to evoke this function');
+        require(diplomasMapping[_digitalFingerprint].exists == false);
         diplomasMapping[_digitalFingerprint].exists = true;
         diplomasMapping[_digitalFingerprint].lastUpdated = block.timestamp;
     }

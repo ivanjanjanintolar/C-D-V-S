@@ -37,7 +37,7 @@ const Permissions = () => {
     } else {
       window.addEventListener('load', function () {
         // do things after the DOM loads fully
-        alert('Install Taquin wallet to interact with TolarSwap')
+        alert('Install Taquin wallet to interact with this application!')
       })
     }
   }
@@ -246,7 +246,7 @@ const Permissions = () => {
                                 className="px-4"
                                 disabled={isSubmitting}
                                 onClick={() => {
-                                  console.log(approveAddress(values.address))
+                                  onApproveAddress(values.address)
                                 }}
                               >
                                 Give permissions
@@ -257,7 +257,7 @@ const Permissions = () => {
                                 className="px-4"
                                 disabled={isSubmitting}
                                 onClick={() => {
-                                  console.log(removeApprovedAddress(values.address))
+                                  onRemoveApprovedAddress(values.address)
                                 }}
                                 color="danger"
                                 style={{ color: 'white' }}

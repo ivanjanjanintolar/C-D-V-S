@@ -56,7 +56,7 @@ const DetailsCard = ({
     } else {
       window.addEventListener('load', function () {
         // do things after the DOM loads fully
-        alert('Install Taquin wallet to interact with TolarSwap')
+        alert('Install Taquin wallet to interact with this application!')
       })
     }
   }

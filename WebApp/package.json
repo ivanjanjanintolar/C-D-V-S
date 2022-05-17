@@ -44,6 +44,7 @@
     "@react-pdf-viewer/default-layout": "^2.6.1",
     "@react-pdf-viewer/full-screen": "^2.6.1",
     "@react-pdf/renderer": "^1.6.17",
+    "@tolar/web3": "^1.0.4",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.5",
     "antd": "^4.17.4",
     "axios": "^0.24.0",
