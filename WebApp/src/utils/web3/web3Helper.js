@@ -1,6 +1,6 @@
 import Web3 from '@dreamfactoryhr/web3t'
 
-export const web3 = new Web3('https://tolarswap.io/api-testnet')
+export const web3 = new Web3('https://tolarswap.io/api-testnet/')
 
 export const tolar = web3.tolar
 

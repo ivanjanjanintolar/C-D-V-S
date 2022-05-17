@@ -105,7 +105,6 @@ const DetailsCard = ({
       })
       .then((result) => {
         const toastId = toast.loading('Transaction pending...')
-        console.log('SENT PURCHASE')
         try {
           promiseRetry(function (retry, number) {
             const transactionDetails = tolar.getTransaction(result.txHash).catch(retry)
@@ -114,7 +113,7 @@ const DetailsCard = ({
             async function (value) {
               if (value.excepted) {
                 toast.update(toastId, {
-                  render: `Transaction failed`,
+                  render: `Transaction failed, make sure that you have permissions to sign documents!`,
                   type: 'error',
                   autoClose: 5000,
                   isLoading: false,
@@ -144,7 +143,7 @@ const DetailsCard = ({
             },
             function (err) {
               toast.update(id, {
-                render: `Transaction failed!`,
+                render: `Transaction failed, make sure that you have permissions to sign documents!`,
                 type: 'error',
                 autoClose: 5000,
                 isLoading: false,

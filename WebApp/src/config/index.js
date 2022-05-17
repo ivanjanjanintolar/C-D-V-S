@@ -1,9 +1,6 @@
 import client from 'axios'
 
-// https://localhost:5000/
-export const baseURL = 'http://localhost:4000/'
-
-//'https://demo.cotrugli.tech/api-v3/'
+export const baseURL = 'https://demo.cotrugli.tech/api/'
 
 export const axios = client.create({
   baseURL,
